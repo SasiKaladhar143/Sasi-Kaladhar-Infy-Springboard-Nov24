@@ -1,0 +1,22 @@
+import pandas as pd
+# Load the datasets
+dataset1 = pd.read_csv(r'C:\Users\ADM\OneDrive\Documents\Infy-N0v24-Internship\apple_products.csv')
+dataset2 = pd.read_csv(r'C:\Users\ADM\OneDrive\Documents\Infy-N0v24-Internship\iphone.csv')
+dataset3 = pd.read_csv(r'C:\Users\ADM\OneDrive\Documents\Infy-N0v24-Internship\pseudo_facebook.csv')
+# Print each dataset
+print("Dataset 1:")
+print(dataset1.head())  
+
+print("\nDataset 2:")
+print(dataset2.head())
+
+print("\nDataset 3:")
+print(dataset3.head())
+
+# Combine the datasets along columns since no common columns exist
+# Concatenating with axis=1 will place them side-by-side
+master_dataset = pd.concat([dataset1, dataset2, dataset3], axis=1)
+
+# Print the master dataset
+print("\nmaster_dataset:")
+print(master_dataset.head())  # Displaying first few rows for brevity
